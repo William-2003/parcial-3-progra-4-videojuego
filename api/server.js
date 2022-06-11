@@ -8,8 +8,10 @@ var server_db = "mongodb+srv://magusdisventure:1234@cluster0.e61rqiw.mongodb.net
 
 //rutas 
 const useRoutes = require('./src/routes/user')
+const rankingRoutes = require('./src/routes/ranking')
 app.use(express.json())
 app.use('/api',useRoutes)
+app.use('/api',rankingRoutes)
 
 
 
@@ -20,7 +22,7 @@ app.get('/',(req,res)=>{
 
 mongoose
     .connect(server_db)
-    .then(()=>console.log("todo bien"))
+    .then(()=>console.log("todo bien y yo que me alegro :D"))
     .catch((error)=>console.error(error)
     )
 
